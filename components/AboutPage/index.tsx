@@ -27,15 +27,18 @@ const About = () => {
       <Info>
         <InfoText>
           <p>
-            I am currently pursuing my third year bachelor degree in computer
+            {`I am currently pursuing my third year bachelor degree in computer
             systems, at ESCOM IPN, while also working at different personal
-            projects in order to increase mi technical skills. <br />
+            projects in order to increase mi technical skills.`}
             <br />
-            Coding is my passion, I really enjoy creating stuff and learning new
-            skills everyday. I'm also currently studying at Platzi in my free
-            time. <br /> <br />I strongly believe that happiness in life comes
-            from becoming better than the one you were the day before. And
-            everyday I try my best to remain happy.
+            <br />
+            {`Coding is my passion, I really enjoy creating stuff and learning new
+            skills everyday. Im also currently studying at Platzi in my free
+            time. `}
+            <br /> <br />
+            {`I strongly believe that happiness in life comes from
+            becoming better than the one you were the day before. And everyday I
+            try my best to remain happy.`}
           </p>
         </InfoText>
         <InfoList>

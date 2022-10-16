@@ -18,9 +18,11 @@ const Contact = () => {
       <Content>
         <Email>
           <EmailMessage>
-            I'm currently looking for job opportunities and freelance projects
-            for small business. <br /> Feel free to send me an email if you're
-            interested in my services.
+            {`I'm currently looking for job opportunities and freelance projects
+            for small business.`}
+            <br />
+            {`Feel free to send me an email if you're
+            interested in my services.`}
           </EmailMessage>
           <EmailForm />
         </Email>
