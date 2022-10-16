@@ -49,7 +49,7 @@ export const useHome = (url: string) => {
       const time = limit === 0 ? 0 : intro[limit].time;
       setTimeout(() => {
         setLimit((limit) => limit + 1);
-      }, time * 8000);
+      }, time * 1000);
     } else if (!showImage && limit === length) {
       setTimeout(() => {
         setImage(true);
