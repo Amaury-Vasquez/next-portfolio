@@ -1,7 +1,7 @@
-import { Loader } from "../Loader";
-import { useStrings } from "../../hooks/useStrings";
-import { useImageLoad } from "../../hooks/useImageLoad";
-import { ProjectData } from "../../hooks/useProjects";
+import { Loader } from '../Loader';
+import { useStrings } from '../../hooks/useStrings';
+import { useImageLoad } from '../../hooks/useImageLoad';
+import { ProjectData } from '../../hooks/useProjects';
 import {
   LoadHead,
   LoadBody,
@@ -14,7 +14,7 @@ import {
   ProjectLink,
   ProjectName,
   ProjectSample,
-} from "./styles";
+} from './styles';
 
 export const Project = (props: { data: ProjectData }) => {
   // Custom hooks
@@ -34,7 +34,7 @@ export const Project = (props: { data: ProjectData }) => {
         <ProjectInfo>
           <p>{toFirstUppercase(description)}</p>
           <Powered color={powered.color}>
-            {"Powered by: " + toFirstUppercase(powered.name)}
+            {'Powered by: ' + toFirstUppercase(powered.name)}
             {powered.Icon}
           </Powered>
           <Links>
@@ -56,7 +56,7 @@ export const Project = (props: { data: ProjectData }) => {
             )}
           </Links>
         </ProjectInfo>
-        <ProjectImg src={img} alt={name + " image"} />
+        <ProjectImg src={img} alt={name + ' image'} />
       </InfoWrapper>
     </ProjectSample>
   );
