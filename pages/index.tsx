@@ -1,23 +1,19 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import { Suspense } from "react";
-import dynamic from "next/dynamic";
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-import { FallbackScreen } from "../components/FallbackScreen";
-
-const HomePage = dynamic(() => import("../components/HomePage"), {
-  suspense: true,
-});
+import HomePage from 'components/HomePage/index';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title> Amaury Vasquez </title>
+        <title> Amaury Vasquez | Web Developer </title>
+        <meta
+          name="description"
+          content="This is the personal page of Amaury Vasquez, a web developer specialized in React with Typescript"
+        />
       </Head>
-      <Suspense fallback={<FallbackScreen />}>
-        <HomePage />
-      </Suspense>
+      <HomePage />
     </>
   );
 };
