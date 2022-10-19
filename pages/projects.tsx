@@ -1,11 +1,11 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import { Suspense } from "react";
-import dynamic from "next/dynamic";
+import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 
-import { FallbackScreen } from "components/FallbackScreen";
+import { FallbackScreen } from 'components/FallbackScreen';
 
-const ProjectPage = dynamic(() => import("components/ProjectPage"), {
+const ProjectPage = dynamic(() => import('components/ProjectPage'), {
   suspense: true,
 });
 
@@ -14,6 +14,10 @@ const Contact = () => {
     <>
       <Head>
         <title> Projects | Amaury Vasquez </title>
+        <meta
+          name="description"
+          content="Amaury Vasquez personal projects info and links"
+        />
       </Head>
       <Suspense fallback={<FallbackScreen />}>
         <ProjectPage />
