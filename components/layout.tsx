@@ -1,11 +1,12 @@
-import { Page } from '../styles/templates';
-import { Header } from './Header';
+import { Header } from './header';
+
+import styles from 'styles/layout.module.scss';
 
 export const Layout = (props: { children: JSX.Element }) => {
   return (
-    <Page>
+    <div className={styles.page}>
       <Header />
       {props.children}
-    </Page>
+    </div>
   );
 };
