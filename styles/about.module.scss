@@ -1,0 +1,176 @@
+@import 'animation.module';
+@import 'sizes';
+
+.aboutPage {
+  @include fadeIn($time: '1s');
+  margin: 0 auto;
+  padding: 30px;
+
+  @media screen and (min-width: $laptopL) {
+    width: min(100%, 1500px);
+  }
+
+  @media screen and (max-width: $smallTablet) {
+    padding: 0;
+  }
+}
+
+.intro {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 4rem;
+
+  @media screen and (max-width: $smallTablet) {
+    line-height: 2rem;
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+}
+
+.whoIam {
+  color: var(--orange);
+  font-size: 2.5em;
+  font-weight: 700;
+
+  @media screen and (max-width: $smallTablet) {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+}
+
+.description {
+  margin: 0 auto;
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+
+  @media screen and (max-width: $smallTablet) {
+    font-size: 1.2em;
+  }
+}
+
+.info {
+  background: #151515;
+  margin-top: 30px;
+  border-radius: 3px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  padding: 30px;
+  grid-gap: 30px;
+
+  * {
+    padding: 0 30px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: 30px 0;
+  }
+
+  @media screen and (max-width: $smallTablet) {
+    grid-template-columns: 1fr;
+    padding: 0;
+    width: 100vw;
+    margin-top: 10px;
+    padding: 10px 0;
+    grid-gap: 10px;
+
+    * {
+      padding: 10px 30px;
+    }
+  }
+}
+
+.infoList {
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  p:first-child {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: 0 10px;
+  }
+
+  @media screen and (max-width: $smallTablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    * {
+      margin-bottom: 10px;
+    }
+
+    p:first-child {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+
+  svg {
+    margin-right: 10px;
+    // fill: ${(props) => props.color};
+    color: white;
+    fill: white;
+  }
+
+  @media screen and (max-width: $tablet) {
+    text-align: center;
+    svg {
+      font-size: 1.5em;
+      margin-right: 5px;
+    }
+  }
+
+  @media screen and (max-width: $smallTablet) {
+    font-size: 1em;
+  }
+}
+
+.infoText {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  text-align: justify;
+  margin-top: 40px;
+
+  @media screen and (max-width: $smallTablet) {
+    font-size: 1rem;
+    grid-row-end: 2;
+    margin-top: 0;
+  }
+}
+
+.buttonWrapper {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 200px;
+  height: auto;
+
+  @media screen and (max-width: $smallTablet) {
+    margin-top: 0;
+    padding: 30px 0px;
+  }
+}

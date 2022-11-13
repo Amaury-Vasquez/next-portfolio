@@ -1,0 +1,118 @@
+@import '_sizes';
+
+@keyframes fadeInKeyframes {
+  from {
+    filter: blur(5px);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@mixin fadeIn($time: 2s, $type: ease) {
+  animation: $time fadeInKeyframes $type;
+}
+
+@keyframes fadeOutKeyframes {
+  from {
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  to {
+    filter: blur(5px);
+    opacity: 0;
+  }
+}
+
+@mixin fadeOut($time: 2s) {
+  animation: $time fadeOutKeyframes ease;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  @include fadeIn();
+  border-top: 1px solid var(--red);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spinner 0.4s linear infinite;
+  animation: spinner 0.4s linear infinite;
+}
+
+@keyframes placeholderKeyframes {
+  to {
+    background-position: 800px;
+  }
+}
+
+@mixin skeleton($time: 2s) {
+  -webkit-animation: placeholderKeyframes $time infinite;
+  animation: placeholderKeyframes $time infinite;
+  background-size: 1600px;
+  background-position: -800px;
+  cursor: progress;
+}
+
+@keyframes bounceKeyframes {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.bounceLoader {
+  position: relative;
+  height: 50px;
+  width: 50px;
+
+  div {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--orange);
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounceKeyframes 2s infinite ease-in-out;
+    animation: bounceKeyframes 2s infinite ease-in-out;
+  }
+
+  :last-child {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+  }
+}
+
+@keyframes colorLoadKeyframes {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin colorLoading() {
+  animation: colorLoadKeyframes 1s linear infinite;
+}
