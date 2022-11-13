@@ -2,10 +2,9 @@ import Head from 'next/head';
 
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
+import { FallbackScreen } from 'components/fallbackScreen';
 
-import { FallbackScreen } from 'components/FallbackScreen';
-
-const ProjectPage = dynamic(() => import('components/ProjectPage'), {
+const ProjectPage = dynamic(() => import('components/projectPage'), {
   suspense: true,
 });
 

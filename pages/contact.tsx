@@ -2,9 +2,9 @@ import Head from 'next/head';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
-import { FallbackScreen } from '../components/FallbackScreen';
+import { FallbackScreen } from '../components/fallbackScreen';
 
-const ContactPage = dynamic(() => import('../components/ContactPage'), {
+const ContactPage = dynamic(() => import('../components/contactPage'), {
   suspense: true,
 });
 

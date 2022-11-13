@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Button } from 'components/Button';
+import { TourButton } from 'components/tourButton';
 
 import styles from 'styles/notFound.module.css';
 
@@ -15,7 +15,7 @@ const NotFound = () => {
         <span className={error404}>404</span>
         <br />
         <span className={`${errorMessage}`}>{'Not found'}</span>
-        <Button link="/" text="Return home" />
+        <TourButton link="/" text="Return home" />
       </div>
     </>
   );
